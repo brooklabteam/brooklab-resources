@@ -7,3 +7,6 @@ This GitHub repo contains general useful notes for the lab that offer a "how-to"
 - Using Midway, the the University of Chicago computing cluster. ([link](https://github.com/brooklabteam/lab-resources/blob/main/midway-how-to.md))
 
 Please feel free to add your own useful links and resources as you go!
+
+I am addin an example sentence here.
+
