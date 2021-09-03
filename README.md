@@ -8,5 +8,5 @@ This GitHub repo contains general useful notes for the lab that offer a "how-to"
 
 Please feel free to add your own useful links and resources as you go!
 
-I am addin an example sentence here.
+I am adding an example sentence here.
 
