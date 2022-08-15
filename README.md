@@ -7,6 +7,7 @@ This GitHub repo contains general useful notes for the lab that offer a "how-to"
 - Set-up keys for SSH (RStudio and GitHub) ([link](https://happygitwithr.com/ssh-keys.html#ssh-keys))
 - Using Midway, the the University of Chicago computing cluster. ([link](https://github.com/brooklabteam/lab-resources/blob/main/midway-how-to.md))
 - Running modeltest-ng on Midway. ([link](https://github.com/brooklabteam/lab-resources/blob/main/modeltest-ng.md))
+- Running RAxML-mpi on Midway. ([link](https://github.com/brooklabteam/brooklab-resources/blob/main/RAxML-mpi.md))
 
 Please feel free to add your own useful links and resources as you go!
 
