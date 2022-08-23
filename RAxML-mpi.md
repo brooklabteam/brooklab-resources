@@ -39,3 +39,7 @@ raxml-ng-mpi --all --msa RAxML_alignment_fullgenomePicornas.fasta --model TVM+G4
 Note that you need to have matching numbers for the -threads command in RAxML with the --ntasks command
 call to SLURM
 
+
+Great troubleshooting guide: https://github-wiki-see.page/m/amkozlov/raxml-ng/wiki/Tutorial
+Note: if raxml-ng stops unexpextedly or does not converge, you may need to manually change internal cutoff value or number of bootstraps. info on how to do so in the link above
+
