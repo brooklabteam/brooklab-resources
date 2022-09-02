@@ -1,15 +1,16 @@
 # Running RAxML-mpi on Midway
 
-To install RAxML on the cluster:
-
-module load openmpi/3.0.0+gcc-10.1.0
+To install RAxML on the cluster and be a part of your profile so you don't have to load it every time:
+vi ~/.bash_profile
+i to insert the following lines: 
+module load openmpi
+module load gcc/10.2.0
 export PATH=/project2/cbrook/software/raxml-ng/bin:$PATH
+press esc to edit insert mode, then type :wq to save and quit
 
 check it works by requesting version (if it says ‘not found’, didn’t work):
 raxml-ng-mpi --version
 
-If this is not incorporated into the SLURM script, you will have to do the
-above step every time you need to use RAxML on the cluster. 
 
 Below is an example of a SLURM script I ran for a very large (412 genera) 
 picornavirus phylogeny, the max time alloted by the cluster (36 hours) was not
@@ -18,10 +19,12 @@ enough to finish so I just emailed the cluster to extend the job time to around
 
 ```
 #!/bin/bash
-#SBATCH --job-name=RAxML-picorna
+#SBATCH --job-name=refseq_all_picorna_raxml
 #SBATCH --partition=broadwl
-#SBATCH --output=RAxML_picorna.out
-#SBATCH --ntasks=13
+#SBATCH --output=refseq_all_picorna_raxml.out
+#SBATCH --nodes=1
+#SBATCH --ntasks=
+#SBATCH --ntasks-per-node=
 #SBATCH --time=36:00:00
 
 module load vim/7.4
@@ -30,10 +33,7 @@ module load python/3.6
 module load java/1.8.0_121
 module load cmake/3.15.1
 
-module load openmpi/3.0.0+gcc-10.1.0
-export PATH=/project2/cbrook/software/raxml-ng/bin:$PATH
-
-raxml-ng-mpi --all --msa RAxML_alignment_fullgenomePicornas.fasta --model TVM+G4 --prefix T3  --seed 12 --threads 13 --bs-metric fbp,tb
+raxml-ng-mpi --all --msa RAxML_aligned_all_refseq_picornaviruses.fasta --model GTR+G4 --prefix T18  --seed 6 --threads 10 --bs-metric fbp,tbe
 ```
 
 Note that you need to have matching numbers for the -threads command in RAxML with the --ntasks command
@@ -41,5 +41,5 @@ call to SLURM
 
 
 Great troubleshooting guide: https://github-wiki-see.page/m/amkozlov/raxml-ng/wiki/Tutorial
-Note: if raxml-ng stops unexpextedly or does not converge, you may need to manually change internal cutoff value or number of bootstraps. info on how to do so in the link above
+Note: if raxml-ng stops unexpectedly or does not converge, you may need to manually change internal cutoff value or number of bootstraps. info on how to do so in the link above
 
