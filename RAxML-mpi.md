@@ -1,11 +1,17 @@
 # Running RAxML-mpi on Midway
 
 To install RAxML on the cluster and be a part of your profile so you don't have to load it every time:
+
 vi ~/.bash_profile
+
 i to insert the following lines: 
+
 module load openmpi
+
 module load gcc/10.2.0
+
 export PATH=/project2/cbrook/software/raxml-ng/bin:$PATH
+
 press esc to edit insert mode, then type :wq to save and quit
 
 check it works by requesting version (if it says ‘not found’, didn’t work):
