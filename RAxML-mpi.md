@@ -12,6 +12,35 @@ module load gcc/10.2.0
 
 export PATH=/project2/cbrook/software/raxml-ng/bin:$PATH
 
+So it should look like this: 
+
+# .bash_profile
+
+# Get the aliases and functions
+if [ -f ~/.bashrc ]; then
+        . ~/.bashrc
+fi
+
+# User specific environment and startup programs
+
+PATH=$PATH:$HOME/bin
+
+export PATH
+module load openmpi
+module load gcc/10.2.0
+export PATH=/project2/cbrook/software/raxml-ng/bin:$PATH
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+"~/.bash_profile" 15L, 276C                                   2,0-1         All
+
+
+
 press esc to edit insert mode, then type :wq to save and quit
 
 check it works by requesting version (if it says ‘not found’, didn’t work):
