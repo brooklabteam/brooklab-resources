@@ -14,14 +14,15 @@ export PATH=/project2/cbrook/software/raxml-ng/bin:$PATH
 
 So it should look like this: 
 
- .bash_profile
+```
+# .bash_profile
 
- Get the aliases and functions
+# Get the aliases and functions
 if [ -f ~/.bashrc ]; then
         . ~/.bashrc
 fi
 
- User specific environment and startup programs
+# User specific environment and startup programs
 
 PATH=$PATH:$HOME/bin
 
@@ -37,7 +38,9 @@ export PATH=/project2/cbrook/software/raxml-ng/bin:$PATH
 ~                                                                               
 ~                                                                               
 ~                                                                               
-"~/.bash_profile" 15L, 276C                                   2,0-1         All
+"~/.bash_profile" 15L, 276C                                   1,1           All
+
+```
 
 
 
