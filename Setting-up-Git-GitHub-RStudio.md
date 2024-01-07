@@ -41,16 +41,14 @@ delete the repository locally before going forward.
     - Copy the new key
         - copy it in RStudio pop up box OR find the ~/usr/.ssh/id_ed25519 file on your computer and open it in a text editor
         - copy the text from SHA256…all the way through your email
-        
-      
-3. **On Github website**: Add the new SSH key to your Github account
+
+
+3. **In the terminal**: follow [these instructions](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/testing-your-ssh-connection) to connect git to the new key you just created: 
+    - Tell the ssh agent what your key is + connect git to git hub in the terminal [(instructions here)](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+
+ 4. **On Github website**: Add the new SSH key to your Github account
     - Profile —> Settings —> Access —> SSH Keys and GPG Keys
     - Name it something like “Katherine personal laptop”
-
-
-4. **In the terminal**: follow [these instructions](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/testing-your-ssh-connection) to connect git to the new key you just created: 
-    - You might also have to tell the ssh agent what your key is + connect git to git hub in the terminal [(instructions here)](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
-	
 	
 5. **In RStudio**: Open a new R Project with Version Control
     - File —> New Project —> Version Control—> Git option
