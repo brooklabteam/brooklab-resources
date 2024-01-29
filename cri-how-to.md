@@ -21,3 +21,9 @@ Next, follow these instructions for a quick-start 'step-by-step' 'how-to' after 
 Password is your CNET ID password. No two-factor authentication is required here.
 
 2. Then, follow the same commands as you use in Midway, only here adopted to CRI.
+3. To run RaxMl, load as follows:
+
+```
+module load gcc/12.1.0
+module load raxml/8.2.12
+```

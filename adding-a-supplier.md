@@ -8,7 +8,7 @@
 6.	Login with CNet ID
 7.	Fill out form. You will need:
 - Your information (name, department)
-- Name/email of anyone you want copied on request (add Bonnie Brown, brownbj and Cara Brook, crook)
+- Name/email of anyone you want copied on request (add Bonnie Brown, brownbj and Cara Brook, cbrook)
 - Supplier information (name, contact*, phone). *This is who the request will be sent to so make sure it’s an email that will get answered!
 - If your supplier is a foreign supplier, please have them fill out the W8BEN tax form linked [here](https://www.irs.gov/pub/irs-pdf/fw8bene.pdf) and attach it to the request.
 8. Submit
