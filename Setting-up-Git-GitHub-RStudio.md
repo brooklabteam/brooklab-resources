@@ -40,7 +40,7 @@ delete the repository locally before going forward.
 		- Restart RStudio after this point!!
     - Copy the new key
         - copy it in RStudio pop up box OR find the ~/usr/.ssh/id_ed25519 file on your computer and open it in a text editor
-        - copy the text from SHA256…all the way through your email
+        - copy the text from SHA256…all the way through the part with the @ symbol that looks like an email address
 
 
 3. **In the terminal**: follow [these instructions](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/testing-your-ssh-connection) to connect git to the new key you just created: 
