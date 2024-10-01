@@ -19,7 +19,7 @@ For reference, here is the mapped COA/POETAF info for the Project (520486/USP100
 
 <img src="images/gems-2.png" alt="gems2" width="300"/>
 
-**Brook lab project numbers can be accessed in the "Brook-lab-COA.xlsx" file in Box [here](https://uchicago.app.box.com/file/1661719979030?s=a1isrkj3lsrlbmaxrdm62p00j5s2x1um)
+**Brook lab project numbers can be accessed in the "Brook-lab-COA.xlsx" file in Box [here](https://uchicago.app.box.com/file/1661719979030?s=a1isrkj3lsrlbmaxrdm62p00j5s2x1um).**
 
 3.	Once the information is entered for each field, scroll to confirm whether a Travel Allowance is needed – enter the appropriate response and then save and continue: 
 
