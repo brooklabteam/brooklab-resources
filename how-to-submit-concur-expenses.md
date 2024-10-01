@@ -8,7 +8,7 @@
 3. The GEMS expenses should be already visible to you when you log into [Concur](https://www.concursolutions.com), while the personal card expenses will require you to make a new report and add all the details when you submit. 
 - Note: Any receipts in Ariary will be automatically converted to USD currency by the Concur software. However, in the ‘Comment’ box at the bottom of every expense that is converted, it is necessary to look up the currency conversion for the date of purchase in [XE](https://www.xe.com/currencyconverter/) and write “XE currency conversion on XYZ [date]: 1 MGA = XXX USD”. Often, this will be a slightly different value than what is entered in Concur, and that is ok.
 
-<img src="images/comment-box-currency.png" alt="currency" width="100"/>
+<img src="images/comment-box-currency.png" alt="currency" width="300"/>
 
 4. For step-by-step help directions on how to reconcile expenses in Concur, please follow the directions listed [here](https://github.com/brooklabteam/brooklab-resources/blob/main/oracle-step-by-step.md).
 
