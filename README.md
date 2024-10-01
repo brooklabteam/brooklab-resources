@@ -16,6 +16,7 @@ This GitHub repo contains general useful notes for the lab that offer a "how-to"
   - Adding a UChicago Supplier ([link](https://github.com/brooklabteam/brooklab-resources/blob/main/adding-a-supplier.md))
   - Making your personal email for Association Ekipa Fanihy ([link](https://github.com/brooklabteam/brooklab-resources/blob/main/ekipafanihy-emails.md))
   - Submitting an invoice for ePayment ([link](https://github.com/brooklabteam/brooklab-resources/blob/main/submitting-epayment.md))
+  - Reconciling expenses in Concur ([link](https://github.com/brooklabteam/brooklab-resources/blob/main/how-to-submit-concur-expenses.md))
 
 
 Please feel free to add your own useful links and resources as you go!
