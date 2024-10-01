@@ -1,21 +1,82 @@
-# Submitting reimbursements via Concur
+# Reconciling expenses in the Oracle system
 
-1. Expenses get filed in two places– those placed on Cara’s personal card are listed [here](https://docs.google.com/spreadsheets/d/1_OaJ9DJeNGAnOdjrYlZIkjgvzWub6I010dUUwKFL0BU/edit?gid=0#gid=0) and those placed on the lab GEMS card are listed [here](https://docs.google.com/spreadsheets/d/1pEHxX_HBmt6vuNe0i8QS_IvNYWS5xNFENYThT5mcRtg/edit?gid=0#gid=0). 
+**This example is for charging expenses to PPM Projects (e.g. sponsored awards, IADF) using POETAF** 
 
-2. Receipts for each type of transaction are listed on Box. Those for Cara’s personal card are uploaded [here](https://uchicago.app.box.com/s/6827t149q4hdl0z6fta47hvj2l4noysv). Those for the lab GEMS card are uploaded [here](https://uchicago.app.box.com/s/x4ed7d1zrwopwv0hmugzy1vjfbyem5a0).
-- Note: For purchases made in the field on the GEMS card (Jumbo, etc.), itemized receipts must be submitted (applicable to non-field purchases as well).
 
-3. The GEMS expenses should be already visible to you when you log into [Concur](https://www.concursolutions.com), while the personal card expenses will require you to make a new report and add all the details when you submit. 
-- Note: Any receipts in Ariary will be automatically converted to USD currency by the Concur software. However, in the ‘Comment’ box at the bottom of every expense that is converted, it is necessary to look up the currency conversion for the date of purchase in [XE](https://www.xe.com/currencyconverter/) and write “XE currency conversion on XYZ [date]: 1 MGA = XXX USD”. Often, this will be a slightly different value than what is entered in Concur, and that is ok.
+1.	Log in to GEMS and create a new report (or click on an expense that has already posted from a GEMS card).
 
-![currency](images/comment-box-currency.png)
+2.	Creating a new report will you show an initial summary page where you will choose whether to charge these expenses to COA (ie, general operating account) or to a Project (ie, an NIH grant, faculty member’s IADF start-up funds). **You will basically always select to apply expenses to a Project (POETAF).**
 
-4. For step-by-step help directions on how to reconcile expenses in Concur, please follow the directions listed [here].
+*NOTE: You can split expenses between multiple projects later in the process (ie, split 50/50 between two different sponsored awards, etc) – but for this initial summary page, you can only select one Project. See the steps related to the ‘Allocation’ process later in this document to split expenses*
 
-5. Please gray out all transactions after they have been submitted on the personal card and GEMS card spreadsheets.
+<img src="images/gems-1.png" alt="gems1" width="300"/>
 
-6. In addition, please check that each item listed on either expense report gets entered into the appropriate spreadsheet tracking for the grant to which it was charged. It should be entered both in the itemized grant sheet [here](https://uchicago.app.box.com/s/ds2h2fuzne01pjwg04k5jc711zcbmibw) and the in the grants overview sheet [here](https://uchicago.app.box.com/s/gwy2w3sx6l7lm062ayc6fhqy7jm3ik6n).
+Select the following options and enter the relevant POETAF values for the Project you are charging this to (the example here is using the POETAF info for FAS account 520486, which corresponds to USP1000449 in the new system):
 
-7. At the end of each month, please sum the monthly total for each grant on the itemized sheet, and check that it matches the total in the overview sheet. Then, convert the next month from blue to black on the overview sheet, and update the projected and spent funding totals accordingly (e.g. make sure the project sums over just the blue and the spent sums over the black).
+<img src="images/gems-1b.png" alt="gems1b" width="300"/>
 
-8. Finally, at the end of every month, please add a new section to the monthly expense report document [here](https://docs.google.com/spreadsheets/d/1GU_2yYmVBj-gkAE3OcGE0G9xld4YRzve7rfLKszff-E/edit?gid=0#gid=0), and slack Cara to let her know everything has been updated.
+For reference, here is the mapped COA/POETAF info for the Project (520486/USP1000449) used in this example:
+
+<img src="images/gems-2.png" alt="gems2" width="300"/>
+
+3.	Once the information is entered for each field, scroll to confirm whether a Travel Allowance is needed – enter the appropriate response and then save and continue: 
+
+<img src="images/gems-3.png" alt="gems3" width="300"/>
+
+4.	Add an expense with the appropriate details (date, amount, location, receipts, etc) and then click the ‘Allocate’ option once the expense info has been filled in: 
+<img src="images/gems-4.png" alt="gems4" width="300"/>
+
+Although the Project information was completed when we started this report, the system will draw in a default COA accounting string that may be incorrect when using a Project/POETAF, so that is what we are going to correct when we select ‘Allocate’:
+
+<img src="images/gems-5.png" alt="gems5" width="300"/>
+In this example, the two highlighted values (Fund 100000 and Purpose 430) are default COA values that automatically populated and need to be corrected.
+
+To correct these fields, click “Add” and then a box will pull up the current allocations:
+
+<img src="images/gems-6.png" alt="gems6" width="300"/>
+
+Make the appropriate COA corrections and then click ‘Save’:
+
+<img src="images/gems-7.png" alt="gems7" width="300"/>
+
+Select the new allocation checkbox and Save again:
+
+<img src="images/gems-8.png" alt="gems8" width="300"/>
+
+5.	Now it will take you back to the expenses screen – from there, to confirm the allocation is correct, go to ‘Allocation Summary’:
+<img src="images/gems-9.png" alt="gems9" width="300"/>
+
+<img src="images/gems-10.png" alt="gems10" width="300"/>
+
+Here we see that the full Project and COA string is now correct since it lists ‘310001/Federal G&C – Direct Recipient’ instead of ‘100000/General Operating’, and lists ‘200/Research – Sponsored Organized’ instead of ‘430/Other Academic Activities.’ 
+
+
+Once the corrected allocation string has been entered, you can also save it as a Favorite so that it shows up again: 
+
+<img src="images/gems-11.png" alt="gems11" width="300"/>
+
+**TIP: If you have lots of expenses it may be easier to add each expense but wait until the end once all have been added to allocate them all at once.  In that case, add each expense and then select the check box next to each one once readyà click ‘Allocate’à and then add the corrected allocation info as shown in Step 4 and save accordingly.**
+
+6.	If you need to split an expense on the same report between multiple Projects, then select the relevant expense using the checkbox next to its line on the ‘Manage Expenses’ screen select ‘Allocate’ Enter any additional Projects you wish to allocate this to using the ‘Add’ button and save their info. Apply the percentage or amount to each Project:
+
+<img src="images/gems-12.png" alt="gems12" width="300"/>
+
+Save the desired split between projects for the expense. 
+
+Additional Notes:
+
+*The search function in each of the fields/dropdown boxes may only work if you select ‘Either’ (it automatically searches based on ‘Text’ and the other option is ‘Code’ – if you are searching a Project number or any other value that contains both numbers and letters, then you must have ‘Either’ selected in order for results to show):*
+
+
+<img src="images/gems-13.png" alt="gems13" width="300"/>
+
+
+
+
+
+
+
+
+
+
+
