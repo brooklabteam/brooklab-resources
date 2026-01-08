@@ -115,3 +115,11 @@ Try the above and download the "test-plot.png" folder into your local repository
 12. Note that you can use the "/global/scratch/users/cbrook" platform instead of "global/home/users/cbrook" for large files (i.e. sequencing data).
 
 13. We also have a shared lab space with some shared files and folders: "global/home/groups/brooklab"
+
+14. Please be sure to test your SLURM scripts on small jobs before kicking off anything big, as it is very possible to accidentally kick off a big run that blows through all our credits in one go (I have made this error myself). To check usage on the brooklab account on savio, simply log in and type 'check_usage.sh -a fc_brooklab'. You should be able to compare the SUs for the lab before and after you kick off a job. Please note that you will see the estimated total usage based on the projected run of an unfinished job -- if your job ends early, or if you cancel it, these SUs are not charged.
+
+15. The above process is particularly important when using an [array job](https://docs-research-it.berkeley.edu/services/high-performance-computing/user-guide/running-your-jobs/submitting-jobs/) that runs many parallel versions of the same script (e.g. if searching over many iterations of different starting parameters for a model fit.) The thing to be aware of in this case, is that your SLURM script is written for each individual task in the array (multiplied by the size of the array). In Savio, some of the partitions assign jobs by node and some by core, so if you run an array job on a partition that schedules by node, you will be requesting an entire node for each task, which will use up credit quickly. Instead, in this case, it is best to work with partitions that assign tasks by core. You can see which partitions correspond to which approach [here](https://docs-research-it.berkeley.edu/services/high-performance-computing/user-guide/running-your-jobs/scheduler-config/) and you can always email BRC consulting at [research-it-consulting@berkeley.edu](mailto:research-it-consulting@berkeley.edu) to get consultation before running your script. Or ask your labmates in the #computing channel in Slack!
+
+
+
+
