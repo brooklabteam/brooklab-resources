@@ -2,6 +2,9 @@
 
 This GitHub repo contains general useful notes for the lab that offer a "how-to" for various projects. Access each of these features by clicking on the title in the Table of Contents:
 
+## New to the lab? Start here
+  - **[Brook Lab Manual](lab-manual/README.md)** — orientation for new members, starting with [Getting started with GitHub and RStudio](lab-manual/01-getting-started-with-github.md).
+
 ## Computing at UC Berkeley:
   - Creating a website using RStudio. ([link](http://nickstrayer.me/RMarkdown_Sites_tutorial/))
   - Connecting to GitHub through RStudio. ([link1](https://www.r-bloggers.com/2014/05/rstudio-pushing-to-github-with-ssh-authentication/)) ([link2](https://happygitwithr.com/rstudio-git-github.html)) ([link 3 - Katherine's Directions](https://github.com/brooklabteam/brooklab-resources/blob/main/Setting-up-Git-GitHub-RStudio.md))
