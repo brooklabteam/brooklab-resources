@@ -8,6 +8,7 @@ Welcome to the Brook Lab! Most of our code, data-analysis scripts, and manuscrip
 4. Connect Git and GitHub to RStudio
 5. Clone a lab repository, make changes, and push them back
 6. Follow a few lab conventions that keep everyone's work safe
+7. Do a test run by making your own `welcome-<name>` repo
 
 Budget about **1–2 hours** for the first-time setup. If you get stuck, ask in the lab Slack or grab another lab member — everyone has fought with this at least once.
 
@@ -24,6 +25,7 @@ Budget about **1–2 hours** for the first-time setup. If you get stuck, ask in 
 - [Part 7: The everyday workflow — pull, commit, push](#part-7-the-everyday-workflow--pull-commit-push)
 - [Part 8: Starting a brand-new project](#part-8-starting-a-brand-new-project)
 - [Part 9: Lab conventions](#part-9-lab-conventions)
+- [Part 10: Test run — make your welcome repo](#part-10-test-run--make-your-welcome-repo)
 - [Troubleshooting](#troubleshooting)
 - [Further reading](#further-reading)
 
@@ -225,6 +227,9 @@ Cloning creates a local copy of a GitHub repo, set up as an **RStudio Project** 
 
 1. **Decide where repos live on your computer.** Pick one folder and keep all repos there, e.g. `~/Developer/` or `~/Documents/GitHub/`.
    - ⚠️ **Avoid** putting repos inside Dropbox, Box, Google Drive, or iCloud-synced folders — the syncing fights with Git and can corrupt the repo.
+   - 💡 **Suggested setup:** create a folder called `Developer` directly inside your **home folder** (also called your home directory). This is the top level of your personal files, the folder that holds `Desktop`, `Documents`, and `Downloads`. In the terminal and in R it's written as `~`, so `~/Developer` always means "the Developer folder in my home folder."
+     - **Mac:** your home folder is `/Users/<your-username>`, so your repos folder will be `/Users/<your-username>/Developer` (e.g. `/Users/CaraBrook/Developer`). In Finder, press **Shift + Cmd + H** (or *Go → Home*) to open your home folder, then *File → New Folder* and name it `Developer`. macOS recognizes this name and gives the folder a special hammer icon. Or, in the terminal: `mkdir ~/Developer`
+     - **Windows:** the equivalent home folder is `C:\Users\<your-username>`, so make `C:\Users\<your-username>\Developer`. In File Explorer, type `%USERPROFILE%` in the address bar and press Enter to open your home folder, then create a new folder named `Developer`. Putting it here (not inside `Documents` or `Desktop`) also keeps it out of **OneDrive**, which on many Windows computers syncs those folders automatically. In Git Bash, `~` also means your home folder, so `mkdir ~/Developer` works there too.
 
 2. **Copy the repo URL from GitHub.** On the repo's page, click the green **`<> Code`** button and copy the URL from the **HTTPS** tab (Option A) or the **SSH** tab (Option B).
 
@@ -314,10 +319,97 @@ usethis::use_github(organisation = "brooklabteam", private = TRUE)
 - **Pull before you start, push before you stop.** This prevents most merge conflicts.
 - **Don't commit large or sensitive data.** GitHub rejects files over 100 MB, and repos get slow well before that. Raw data, anything with personal or location-sensitive information, and passwords/tokens go in `.gitignore`. Ask Cara where large datasets should be stored.
 - **Keep repos out of cloud-synced folders** (Dropbox, Box, Google Drive, iCloud).
-- **Use RStudio Projects and relative paths.** Write `read.csv("data/samples.csv")`, not `read.csv("/Users/jane/Desktop/samples.csv")`, so the code runs on anyone's computer. The [`here`](https://here.r-lib.org/) package helps.
+- **Use RStudio Projects and set your home directory once, at the top of each script.** Every lab R script starts by clearing the environment and setting `homewd` to the repo's location on your computer (see the template in [Part 10](#part-10-test-run--make-your-welcome-repo)). Everywhere else in the script, use paths relative to that folder, e.g. `read.csv("data/samples.csv")`, never `read.csv("/Users/jane/Desktop/samples.csv")`. That way anyone can run your code by changing just the top line.
 - **Write a README** in every repo explaining what the project is and how the folders are organized.
 - **Write meaningful commit messages** — your future self will thank you.
 - **Shared repos:** if several people are actively editing the same repo, talk to each other about who is working on which files, or use branches and pull requests (ask for a walkthrough the first time).
+
+---
+
+## Part 10: Test run — make your welcome repo
+
+Time to put it all together. Every new lab member makes a small practice repo called `welcome-<yourname>` under `brooklabteam`. It's a safe place to try every step, and it lets us confirm your setup works before you start on real projects.
+
+Throughout, replace `<yourname>` with your first name in lowercase (e.g. `welcome-cara`).
+
+### Step 1: Create the repo on GitHub
+
+1. Go to the [brooklabteam](https://github.com/brooklabteam) organization page and click **New** (or **+ → New repository** in the top-right corner).
+2. Make sure the **Owner** is `brooklabteam`, not your personal account.
+3. **Repository name:** `welcome-<yourname>`.
+4. Choose **Private**.
+5. Tick **Add a README file**.
+6. Under **Add .gitignore**, choose the **R** template.
+7. Click **Create repository**.
+
+### Step 2: Clone it as an RStudio project
+
+Follow [Part 6](#part-6-clone-a-repository-into-an-rstudio-project):
+
+1. On your new repo's GitHub page, click the green **`<> Code`** button and copy the HTTPS or SSH URL (whichever matches how you set up authentication in Part 5).
+2. In RStudio: *File → New Project… → Version Control → Git*. Paste the URL, keep the directory name `welcome-<yourname>`, and create it inside your `Developer` folder.
+3. RStudio reopens in the new project. Check that you see the **Git** tab and a `welcome-<yourname>.Rproj` file in the Files pane.
+
+### Step 3: Write a simple R script
+
+1. Make a new script: *File → New File → R Script*.
+2. **Every lab script opens with the same three lines.** Copy these to the top of your script and swap in your own username and repo name:
+
+   ```r
+   rm(list=ls())# to clear working directory
+   homewd = "/Users/carabrook/Developer/welcome-cara" #(swap names for theirs)
+   setwd(homewd)# this makes the whole script reproducible by just changing the top line
+   ```
+
+   - **Mac:** the path looks like `"/Users/<your-username>/Developer/welcome-<yourname>"`.
+   - **Windows:** the path looks like `"C:/Users/<your-username>/Developer/welcome-<yourname>"`. Use forward slashes `/`, not backslashes `\`, because R treats a backslash as a special character.
+   - Not sure of the exact path? Run `getwd()` in the Console while your project is open and copy what it prints.
+
+3. Below those lines, add something simple. Anything works. Here's an example that uses only base R, so you don't need to install any packages:
+
+   ```r
+   # make a small data frame
+   bats <- data.frame(
+     species = c("Pteropus rufus", "Eidolon dupreanum", "Rousettus madagascariensis"),
+     n_captured = c(12, 25, 18)
+   )
+
+   print(bats)
+
+   # save a bar plot into the repo folder
+   png("welcome-plot.png", width = 800, height = 500)
+   barplot(bats$n_captured, names.arg = bats$species,
+           ylab = "Number captured", main = "Welcome to the Brook Lab!")
+   dev.off()
+   ```
+
+   Because `setwd(homewd)` ran at the top, `welcome-plot.png` is saved straight into your repo folder.
+
+4. Save the script as `welcome.R` in the main repo folder.
+5. Run the whole script (**Source** button, or **Cmd/Ctrl + Shift + S**) and check that it works without errors.
+
+### Step 4: Personalize the README
+
+Open `README.md` from the Files pane and add a couple of lines about yourself: your name, your role in the lab, and what you're excited to work on. Save it.
+
+### Step 5: Commit and push
+
+Use the workflow from [Part 7](#part-7-the-everyday-workflow--pull-commit-push):
+
+1. In the **Git** tab, you should see `welcome.R`, `welcome-plot.png`, and `README.md`.
+2. Tick **Staged** for all three.
+3. Click **Commit**, write a message like *"Add welcome script, plot, and intro"*, and click **Commit**.
+4. Click **Push** (green ⬆ arrow).
+
+### Step 6: Check it worked
+
+1. Refresh your repo's page on GitHub. You should see your script, your plot, and your updated README.
+2. Click on `welcome-plot.png` to see your plot right on GitHub.
+3. **Send the link to your repo to Cara** to show you're set up.
+
+**Extra practice (optional):** edit something directly on the GitHub website (for example, fix a typo in the README using the ✏️ pencil icon and commit it there). Then go back to RStudio and **Pull**. You'll see the change arrive on your computer. This is exactly what happens when a collaborator pushes changes.
+
+🎉 **You're done!** You've now done everything you'll need for day-to-day work in the lab.
 
 ---
 
